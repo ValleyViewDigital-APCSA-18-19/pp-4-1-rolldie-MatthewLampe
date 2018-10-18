@@ -1,0 +1,48 @@
+package Dice;
+import java.util.Random;
+
+public class Dice 
+{
+	private int SideNumber;
+	private int FGoal;
+
+
+	public Dice()
+	{
+		int SideNumber = 0;
+		int EndGoal = 0;
+	}
+	
+	public Dice(int inItSideNumber)
+	{
+		SideNumber = inItSideNumber;
+		
+	}
+	
+	public void setSide(int newSide)
+	{
+		SideNumber = newSide;
+	}
+	
+	public int Goal()
+	{
+		Random Choice = new Random();
+		int Goal = Choice.nextInt(SideNumber);
+		return Goal;
+	}
+	public String toString()
+	{
+		String output = new String();
+				
+				output = ("Number of sides: " + SideNumber + " Side Rolled: " + Goal());
+				
+			return output;
+	}
+	
+	public int getSide()
+	{
+		return (int) SideNumber;
+	}
+	
+	
+}
