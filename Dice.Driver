@@ -1,0 +1,14 @@
+package Dice;
+
+
+public class DiceDriver
+{
+	public static void main(String[] args)
+	{
+		Dice Side = new Dice(200);
+		
+		System.out.println(Side.toString());
+		Side.setSide(184);
+		System.out.println(Side.toString());
+	}
+}
