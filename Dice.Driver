@@ -1,4 +1,5 @@
 package Dice;
+import java.util.Scanner;
 
 
 public class DiceDriver
@@ -6,9 +7,14 @@ public class DiceDriver
 	public static void main(String[] args)
 	{
 		Dice Side = new Dice(200);
-		
+		int seed;
+		Scanner jaba = new Scanner(System.in);
 		System.out.println(Side.toString());
 		Side.setSide(184);
+		System.out.println(Side.toString());
+		System.out.println("How many sides does the die have?: ");
+		seed = jaba.nextInt();
+		Side.setSide(seed);
 		System.out.println(Side.toString());
 	}
 }
